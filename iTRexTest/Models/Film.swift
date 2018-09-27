@@ -9,27 +9,16 @@
 import Foundation
 
 
-class List: Decodable {
+struct List: Decodable {
     let list: [Film]
-    init(list: [Film]) {
-        self.list = list
-    }
 }
 
-class Film: Decodable {
+struct Film: Decodable {
     
     let image: String
     let name: String
     let name_eng: String
     let premiere: String
     let description: String
-    
-    init(image: String, name: String, nameEng: String, premiere: String, description: String) {
-        self.image = image
-        self.name = name
-        self.name_eng = nameEng
-        self.premiere = premiere
-        self.description = description
-    }
     
 }
