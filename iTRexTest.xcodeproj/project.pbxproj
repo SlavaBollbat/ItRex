@@ -16,6 +16,9 @@
 		F907FA8E215BA4840089A922 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907FA8D215BA4840089A922 /* FilmCell.swift */; };
 		F907FA90215BEAE80089A922 /* DetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907FA8F215BEAE80089A922 /* DetailViewViewController.swift */; };
 		F907FA9B215C9EBF0089A922 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907FA9A215C9EBF0089A922 /* Constants.swift */; };
+		F907FAF4215D7B000089A922 /* FilmNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907FAF3215D7B000089A922 /* FilmNetworkService.swift */; };
+		F90CA24821601D6F006BC291 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CA24721601D6F006BC291 /* NetworkService.swift */; };
+		F916D9D12160225800CD5F44 /* GetFilmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F916D9D02160225800CD5F44 /* GetFilmResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F907FA8D215BA4840089A922 /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		F907FA8F215BEAE80089A922 /* DetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewViewController.swift; sourceTree = "<group>"; };
 		F907FA9A215C9EBF0089A922 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F907FAF3215D7B000089A922 /* FilmNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmNetworkService.swift; sourceTree = "<group>"; };
+		F90CA24721601D6F006BC291 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F916D9D02160225800CD5F44 /* GetFilmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilmResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +68,11 @@
 		F907FA76215B77240089A922 /* iTRexTest */ = {
 			isa = PBXGroup;
 			children = (
+				F907FA97215C9E0F0089A922 /* Model */,
+				F907FA94215C9DB50089A922 /* View */,
 				F907FA96215C9DF80089A922 /* Controllers */,
-				F907FA94215C9DB50089A922 /* Views */,
-				F907FA97215C9E0F0089A922 /* Models */,
+				F907FAF5215E01F70089A922 /* FilmNetworkServices */,
+				F90CA24621601D50006BC291 /* NetworkService */,
 				F907FA98215C9E960089A922 /* Common */,
 				F907FA93215C9D650089A922 /* SupportingFiles */,
 			);
@@ -82,21 +90,21 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		F907FA94215C9DB50089A922 /* Views */ = {
+		F907FA94215C9DB50089A922 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F907FA7B215B77240089A922 /* Main.storyboard */,
-				F907FA95215C9DD20089A922 /* Cells */,
+				F907FA95215C9DD20089A922 /* Cell */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		F907FA95215C9DD20089A922 /* Cells */ = {
+		F907FA95215C9DD20089A922 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				F907FA8D215BA4840089A922 /* FilmCell.swift */,
 			);
-			path = Cells;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F907FA96215C9DF80089A922 /* Controllers */ = {
@@ -108,12 +116,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F907FA97215C9E0F0089A922 /* Models */ = {
+		F907FA97215C9E0F0089A922 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F907FA8B215B99340089A922 /* Film.swift */,
+				F916D9D02160225800CD5F44 /* GetFilmResponse.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F907FA98215C9E960089A922 /* Common */ = {
@@ -127,9 +136,33 @@
 		F907FA99215C9EA10089A922 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F907FA9A215C9EBF0089A922 /* Constants.swift */,
+				F907FAF2215D7AC80089A922 /* UIConstants */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F907FAF2215D7AC80089A922 /* UIConstants */ = {
+			isa = PBXGroup;
+			children = (
+				F907FA9A215C9EBF0089A922 /* Constants.swift */,
+			);
+			path = UIConstants;
+			sourceTree = "<group>";
+		};
+		F907FAF5215E01F70089A922 /* FilmNetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				F907FAF3215D7B000089A922 /* FilmNetworkService.swift */,
+			);
+			path = FilmNetworkServices;
+			sourceTree = "<group>";
+		};
+		F90CA24621601D50006BC291 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				F90CA24721601D6F006BC291 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F907FA8C215B99340089A922 /* Film.swift in Sources */,
+				F916D9D12160225800CD5F44 /* GetFilmResponse.swift in Sources */,
+				F907FAF4215D7B000089A922 /* FilmNetworkService.swift in Sources */,
+				F90CA24821601D6F006BC291 /* NetworkService.swift in Sources */,
 				F907FA8E215BA4840089A922 /* FilmCell.swift in Sources */,
 				F907FA7A215B77240089A922 /* ViewController.swift in Sources */,
 				F907FA90215BEAE80089A922 /* DetailViewViewController.swift in Sources */,

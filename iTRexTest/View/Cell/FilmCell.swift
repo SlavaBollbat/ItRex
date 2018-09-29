@@ -19,14 +19,29 @@ class FilmCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var engNameLabel: UILabel!
     @IBOutlet weak var premierLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         descriptionLabel.numberOfLines = 0
-
+        
+    }
+    
+    func configure(with film: Film) {
+        nameLabel.text = film.name
+        engNameLabel.text = film.nameEng
+        premierLabel.text = film.premiere
+        descriptionLabel.text = film.description
+        if let imageURL = URL(string: film.image) {
+            if let data = try? Data(contentsOf: imageURL) {
+                imageCell.image = UIImage(data: data)
+            }
+        }
+        
     }
     
 }
